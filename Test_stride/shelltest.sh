@@ -13,7 +13,7 @@ echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 sleep 2
 
 if [ ! $NODENAME ]; then
-	read -p "Enter node name: " NODENAME
+	read -p "Masukin Nama Node: " NODENAME
 	echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
 fi
 STRIDE_PORT=16
