@@ -16,8 +16,9 @@ wget -O starknet.sh https://raw.githubusercontent.com/scryotic-tech/Nodetestnet/
 ## Step 3
 Input HTPS from alchemy
 
-## Step 3
+## Step 4
 Done
+================================
 
 #### Check your logs
 ```
