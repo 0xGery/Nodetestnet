@@ -18,9 +18,8 @@ Input HTPS from alchemy
 
 ## Step 4
 Done
-================================
 
-#### Check your logs
+## Check your logs
 ```
 docker logs -f starknet
 ```
