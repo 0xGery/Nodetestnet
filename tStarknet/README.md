@@ -1,7 +1,7 @@
 EHEH
 
 ## Step 1
-### Register Alchemy account
+#### Register Alchemy account
 * [Click here](https://forms.gle/3h4wDbab9f6bZ68L8) to register an alchemy account
 * Choose Ethereum mainnet
 * Enter the App
@@ -18,3 +18,8 @@ Input HTPS from alchemy
 
 ## Step 3
 Done
+
+#### Check your logs
+```
+docker logs -f starknet
+```
