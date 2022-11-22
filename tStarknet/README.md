@@ -11,10 +11,10 @@ EHEH
 ### Step 2
 # Install starknetnya
 ```
-wget -O starknet.sh.sh https://raw.githubusercontent.com/scryotic-tech/Nodetestnet/main/tStarknet/starknet.sh && chmod +x starknet.sh && ./starknet.sh
+wget -O starknet.sh https://raw.githubusercontent.com/scryotic-tech/Nodetestnet/main/tStarknet/starknet.sh && chmod +x starknet.sh && ./starknet.sh
 ```
 ### Step 3
 Input HTPS dari alchemy
 
 ### Step 3
-Done (Kayaknya
+Done (Kayaknya)
