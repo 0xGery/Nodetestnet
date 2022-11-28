@@ -7,7 +7,7 @@ Input your 0x Address
 
 ### Step 3
 ```
-docker run -it exorde-cli -m $Address -l 4
+docker run -it exorde-cli -m $Address -l 2
 ```
 
 ### step 4 Exit from screen
