@@ -13,20 +13,20 @@ echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 sleep 2
 
-if [ ! $Address ]; then
-	read -p "Input your 0x Address: " Address
-	echo 'export Address='$Address >> $HOME/.bash_profile
+if [ ! $nAddress ]; then
+	read -p "Input your 0x Address: " nAddress
+	echo 'export Address='$nAddress >> $HOME/.bash_profile
 fi
 source $HOME/.bash_profile
-if [ ! $PrivateKey ]; then
-	read -p "Input your Private Key: " PrivateKey
-	echo 'export PrivateKey='$PrivateKey >> $HOME/.bash_profile
+if [ ! $nPrivateKey ]; then
+	read -p "Input your Private Key: " nPrivateKey
+	echo 'export PrivateKey='$nPrivateKey >> $HOME/.bash_profile
 fi
 source $HOME/.bash_profile
 
 echo '================================================='
-echo -e "Your Address: \e[1m\e[32m$Address\e[0m"
-echo -e "Your PrivateKey: \e[1m\e[32m$PrivateKey\e[0m"
+echo -e "Your Address: \e[1m\e[32m$nAddress\e[0m"
+echo -e "Your PrivateKey: \e[1m\e[32m$nPrivateKey\e[0m"
 echo '================================================='
 
 sleep 2
