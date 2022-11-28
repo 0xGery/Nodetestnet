@@ -57,6 +57,7 @@ if [ ! $nCPU ]; then
 fi
 source $HOME/.bash_profile
 
-echo -e "e[1m\e[32m4. Nunet Onboarding... \e[0m" && sleep 1
-nunet onboard -m $CPU -c $Mem -n nunet-test -a $nAddress
+sleep 1
+echo -e "\e[1m\e[32m5. Nunet Onboarding... \e[0m" && sleep 1
+nunet onboard -m $nMem -c $nCPU -n nunet-test -a $nAddress
 
