@@ -15,13 +15,13 @@ sleep 2
 
 if [ ! $Address ]; then
 	read -p "Input your 0x Address: " Address
+	echo 'export Address='$Address >> $HOME/.bash_profile
 fi
-sleep 1
+source $HOME/.bash_profile
 if [ ! $PrivateKey ]; then
 	read -p "Input your Private Key: " PrivateKey
+	echo 'export PrivateKey='$PrivateKey >> $HOME/.bash_profile
 fi
-echo 'export Address='$Address >> $HOME/.bash_profile
-echo 'export PrivateKey='$PrivateKey >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
 echo '================================================='
