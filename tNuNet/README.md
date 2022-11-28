@@ -1,4 +1,4 @@
-# Computer Provider
+# Compute Provider
 
 ### Step 1
 ```
