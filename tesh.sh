@@ -38,8 +38,8 @@ select opt in $OPTIONS; do
         if [ ! $nPrivateKey ]; then
         read -p "Input your Private Key: " nPrivateKey
         echo 'export nPrivateKey='$nPrivateKey >> $HOME/.bash_profile
-        fi
-	exit
+        break
+	fi
     elif [ "$opt" = "No" ]; then
     	"\e[1m\e[32m Creating New Wallet...  \e[0m"
         nunet wallet new
@@ -51,8 +51,8 @@ select opt in $OPTIONS; do
         if [ ! $nPrivateKey ]; then
         read -p "Input your Private Key: " nPrivateKey
         echo 'export nPrivateKey='$nPrivateKey >> $HOME/.bash_profile
-        fi
-	exit
+	break
+	fi
     fi
 done
         
