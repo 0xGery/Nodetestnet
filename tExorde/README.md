@@ -10,8 +10,7 @@ Input your 0x Address
 docker run -it exorde-cli -m $Address -l 4
 ```
 
-### step 4 
-### Exit from screen
+### step 4 Exit from screen
 CTRL A + D
 
 
