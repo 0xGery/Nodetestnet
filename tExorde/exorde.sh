@@ -20,7 +20,7 @@ fi
 source $HOME/.bash_profile
 
 echo '================================================='
-echo -e "Address 0xMu: \e[1m\e[32m$Address\e[0m"
+echo -e "Your 0x Address: \e[1m\e[32m$Address\e[0m"
 echo '================================================='
 
 sleep 2
