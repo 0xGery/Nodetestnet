@@ -2,7 +2,9 @@
 ```
 wget -O nunet.sh https://raw.githubusercontent.com/scryotic-tech/Nodetestnet/main/tNuNet/nunet.sh && chmod +x nunet.sh && ./nunet.sh
 ```
-In case of success, you will see the message Successfully Onboarded.
+## Important Note
+
+### Note that to be eligible for this, you must onboard at least 10,000MB of memory and 6,000MHz of compute capacity. In case of success, you will see the message Successfully Onboarded.
 ### Step 2
 Wait 5 minutes to give some time for components to start
 
