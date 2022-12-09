@@ -2,7 +2,7 @@
 
 [Beta waitlist registration](https://fleek.xyz/)
 
-Join our telegram Group [Here](https://t.me/WonCryptoClass3)
+Join our discussion group [Here](https://t.me/WonCryptoClass3)
 # Installation Node
 
 ### Step 1
