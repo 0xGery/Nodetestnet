@@ -14,6 +14,7 @@ echo "+++++++++++++++++++++++++++++++++++++++++++++++++++"
 sleep 2
 
 echo -e "\e[1m\e[32m1. Installing Dependencies... \e[0m" && sleep 1
+sudo apt-get install screen wget
 sudo apt-get update && apt-get upgrade && sudo apt-get install build-essential cmake curl protobuf-compiler clang pkg-config libssl-dev git ca-certificates gnupg lsb-release -y && sudo mkdir -p /etc/apt/keyrings && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
