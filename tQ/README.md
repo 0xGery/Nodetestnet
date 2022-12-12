@@ -1,14 +1,14 @@
 # Q BLOCKCHAIN TESTNET
 
-### First Step
+## First Step
 Install Q-Blockchain 
 ```
 wget -O tQ.sh https://raw.githubusercontent.com/scryotic-tech/Nodetestnet/main/tQ/tQ.sh && chmod +x tQ.sh && ./tQ.sh
 ```
-### Second Step
+## Second Step
 Get Faucet [Here](https://faucet.qtestnet.org/)
 
-### Third Step
+## Third Step
 * Edit .env
 ```
 cd ~/testnet-public-tools/testnet-validator && nano .env
@@ -24,13 +24,13 @@ BOOTNODE6_ADDR=enode://1032c556fbbfe37761951a20c2b98b4031234a8f871cc79dd8ff612a3
 BOOTNODE7_ADDR=enode://e974d9354ababd356a6bfecbb03a59d14ab715ffa02d431c6accfc5de250e9c8c345817bd5687c119a04df78f1a4673e97877ea5775fa84270d311dac4a2eca7@128.199.213.70:30313
 ```
 
-### Fourth Step
+## Fourth Step
 Stake contract
 ```
 docker run --rm -v $PWD:/data -v $PWD/config.json:/build/config.json qblockchain/js-interface:testnet validators.js
 ```
 
-### Fifth Step
+## Fifth Step
 ```
 nano docker-compose.yaml
 ```
@@ -38,13 +38,13 @@ Add code below, after `geth:`
 ```
  "--bootnodes=$BOOTNODE1_ADDR,$BOOTNODE2_ADDR,$BOOTNODE3_ADDR,$BOOTNODE4_ADDR,$BOOTNODE5_ADDR,$BOOTNODE6_ADDR,$BOOTNODE7_ADDR", "--ethstats=$ValidatorName:qstats-testnet@stats.qtestnet.org",​
 ```
-### Sixth Step
+## Sixth Step
 Run the Node
 ```
 docker compose up -d
 ```
 # Important Command
-Check Logs
+## Check Logs
 ```
 cd ~/testnet-public-tools/testnet-validator && docker compose logs -f
 ```
