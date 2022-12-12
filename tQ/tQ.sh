@@ -13,6 +13,14 @@ echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 sleep 2
 
+if [ ! $$ValidatorName ]; then
+	read -p "Input your Validator Name: " ValidatorName
+	echo 'export ValidatorName='$ValidatorName >> $HOME/.bash_profile
+fi
+source $HOME/.bash_profile
+
+sleep 1
+
 echo -e "\e[1m\e[32m1. Downloading & Installing Essential package... \e[0m" && sleep 1
 sudo apt-get update && sudo apt install jq && sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 sudo apt-get install \
