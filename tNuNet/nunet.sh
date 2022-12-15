@@ -20,7 +20,7 @@ echo -e "\e[1m\e[32m2. Installing DMS... \e[0m" && sleep 1
 sudo apt update && sudo apt install ./nunet-dms-latest.deb
 
 echo -e "\e[1m\e[32m3. DMS status... \e[0m" && sleep 1
-systemctl status nunet-dms
+systemctl show -p SubState nunet-dms | sed 's/SubState=//g'
 
 sleep 2
 
