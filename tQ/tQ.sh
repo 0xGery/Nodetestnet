@@ -49,7 +49,7 @@ sleep 1
 
 if [ ! $Pwde ]; then
 	read -p "Enter new wallet password: " Pwde
-	echo 'export Pwde='$Pwde >> $HOME/testnet-public-tools/testnet-validator/keystore/pwd.txt
+	echo $Pwde >> $HOME/testnet-public-tools/testnet-validator/keystore/pwd.txt
 fi
 
 sleep 1
