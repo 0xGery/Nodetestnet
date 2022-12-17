@@ -22,6 +22,7 @@ source $HOME/.bash_profile
 sleep 1
 
 echo -e "\e[1m\e[32m1. Downloading & Installing Essential package... \e[0m" && sleep 1
+cd $HOME
 sudo apt-get update && sudo apt install jq && sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 sudo apt-get install \
     ca-certificates \
@@ -48,7 +49,7 @@ sleep 1
 
 if [ ! $Pwde ]; then
 	read -p "Enter new wallet password: " Pwde
-	echo $Pwde >> ~/testnet-public-tools/testnet-validator/keystore/pwd.txt
+	echo 'export Pwde='$Pwde >> $HOME/testnet-public-tools/testnet-validator/keystore/pwd.txt
 fi
 
 sleep 1
