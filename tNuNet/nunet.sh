@@ -13,42 +13,39 @@ echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 sleep 2
 
-echo -e "\e[1m\e[32m1. Downloading DMS... \e[0m" && sleep 1
+echo -e "\e[1m\e[32mDownloading DMS... \e[0m" && sleep 1
 cd $HOME && wget https://d.nunet.io/nunet-dms-latest.deb
 
-echo -e "\e[1m\e[32m2. Installing DMS... \e[0m" && sleep 1
+echo -e "\e[1m\e[32mInstalling DMS... \e[0m" && sleep 1
 sudo apt update && sudo apt install ./nunet-dms-latest.deb
 
-echo -e "\e[1m\e[32m3. DMS status... \e[0m" && sleep 1
+echo -e "\e[1m\e[32mDMS status... \e[0m" && sleep 1
 systemctl show -p SubState nunet-dms | sed 's/SubState=//g'
 
 sleep 2
 
-echo -e "\e[1m\e[32m4. Do you have 0x Address? \e[0m" && sleep 1
-
-OPTIONS="Yes No"
-
-select opt in $OPTIONS; do
-    if [ "$opt" = "Yes" ]; then 
-        break
-    elif [ "$opt" = "No" ]; then
-    	echo -e "\e[1m\e[32mCreating New Wallet...  \e[0m" && sleep 1
-        nunet wallet new
-	break
-    fi
+while true; do
+	read -p "Do you have 0x Address? (yes/no)" nWalResp
+	case $nWalResp in
+		yes ) break ;;
+		no  ) 
+    		echo -e "\e[1m\e[32mCreating New Wallet...  \e[0m" && sleep 1
+			nWalletAddress=$(nunet wallet new)
+			nAddress=$(echo $nWalletAddress | jq -r .address)
+			echo "Your new wallet information used for NuNet: "
+			echo -e "Address: \033[33m$(echo $nWalletAddress | jq -r .address)\033[0m"
+			echo -e "PrivateKey: \033[33m$(echo $nWalletAddress | jq -r .private_key)\033[0m"
+			break;;
+		*   ) echo "Only 'yes' or 'no' please";;
+	esac
 done
         
 sleep 2
 
 if [ ! $nAddress ]; then
 	read -p "Input your 0x Address: " nAddress
-	echo 'export nAddress='$nAddress >> $HOME/.bash_profile
 fi
-source $HOME/.bash_profile
-if [ ! $nPrivateKey ]; then
-	read -p "Input your Private Key: " nPrivateKey
-	echo 'export nPrivateKey='$nPrivateKey >> $HOME/.bash_profile
-fi
+
 source $HOME/.bash_profile
 
 echo '================================================='
@@ -60,7 +57,7 @@ sleep 2
 
 source $HOME/.bash_profile
 
-echo -e "\e[1m\e[32m5. Checking your Memory & CPU... \e[0m" && sleep 1
+echo -e "\e[1m\e[32mChecking your Memory & CPU... \e[0m" && sleep 1
 nunet available --pretty
 
 sleep 2
@@ -77,9 +74,9 @@ fi
 source $HOME/.bash_profile
 
 sleep 1
-echo -e "\e[1m\e[32m6. Deleting trash... \e[0m" && sleep 1
+echo -e "\e[1m\e[32mDeleting trash... \e[0m" && sleep 1
 rm nunet.sh
 rm nunet-dms-latest.deb
 
-echo -e "\e[1m\e[32m7. Nunet Onboarding... \e[0m" && sleep 1
+echo -e "\e[1m\e[32mNunet Onboarding... \e[0m" && sleep 1
 nunet onboard -m $nMem -c $nCPU -n nunet-test -a $nAddress
