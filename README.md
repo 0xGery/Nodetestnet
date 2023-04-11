@@ -3,5 +3,5 @@
 
 ### Chat with me 
 * Join our discussion group [Here](https://t.me/WonCryptoClass3)
-* Telegram https://t.me/scryotic
+* Telegram https://t.me/oxgery
 * Discord Swagery#0403
