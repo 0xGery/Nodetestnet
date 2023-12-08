@@ -14,7 +14,7 @@ echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 sleep 2
 
 if [ ! $ApiURL ]; then
-	read -p "Masukin URL HTTPSmu: " ApiURL
+	read -p "Input Your url: " ApiURL
 	echo 'export ApiURL='$ApiURL >> $HOME/.bash_profile
 fi
 
