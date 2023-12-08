@@ -3,7 +3,7 @@
 ## First Step
 Install Q-Blockchain 
 ```
-wget -O tQ.sh https://raw.githubusercontent.com/scryotic-tech/Nodetestnet/main/tQ/tQ.sh && chmod +x tQ.sh && ./tQ.sh
+wget -O tQ.sh https://raw.githubusercontent.com/0xGery/Nodetestnet/main/tQ/tQ.sh && chmod +x tQ.sh && ./tQ.sh
 ```
 ## Second Step
 Get Faucet [Here](https://faucet.qtestnet.org/)
